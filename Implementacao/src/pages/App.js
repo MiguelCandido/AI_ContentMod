@@ -40,29 +40,6 @@ export default class Perfil extends Component {
     }
   } */
 
-
-  ModeracaoImg = () =>  {
-    const axios = require('axios');
-
-    axios.get('https://api.sightengine.com/1.0/check.json', {
-      params: {
-        'url': 'https://st3.depositphotos.com/1426049/15210/i/950/depositphotos_152102950-stock-photo-blurred-alcohol-bottles-on-a.jpg',
-        'models': 'nudity,wad,offensive,text-content,gore',
-        'api_user': '1374066647',
-        'api_secret': 'qiD7P27GafceZqK4zB9K',
-      }
-    })
-      .then(function (response) {
-        // on success: handle response
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        // handle error
-        if (error.response) console.log(error.response.data);
-        else console.log(error.message);
-      });
-  }
-
   /* const axios = require('axios');
    const FormData = require('form-data');
    const fs = require('fs');
@@ -98,8 +75,9 @@ export default class Perfil extends Component {
       console.log(this.state.urlimg)
     }
 
-    envio = async (event) => {
+    envio = () => {
       localStorage.setItem('url', this.state.urlimg)
+      console.log("Enviei")
     }
 
 
