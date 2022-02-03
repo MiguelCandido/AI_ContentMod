@@ -16,7 +16,7 @@ main {
 
 #conteudo{
     background-color: #23617ba4;
-    height: 100%;
+    height: 95%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,68 @@ main {
     font-size: 25px;
 }
 
+#formulario{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formulario input{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#formulario label{
+display: inline-block;
+display: flex;
+text-align: center ;
+background-color: #FDC63A;
+font-family: 'Staatliches', cursive;
+color: white;
+cursor: pointer;
+width: 217px;
+height: 59px;
+border-radius: 23px;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+font-weight: 300;
+}
+
+#formulario button{
+    margin-top: 50px;
+    border: 0;
+    display: flex;
+    text-align: center ;
+    background-color: #F0AF08;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    cursor: pointer;
+    width: 263px;
+    height: 78px;
+    border-radius: 23px;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 300;
+    }
+
+
 footer{
-    height: 77px;
+    height: 5%;
     background-color: #193c4bf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span{
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-size: 30px;
 }
