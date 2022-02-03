@@ -8,7 +8,7 @@
 }
 
 main {
-    background-image: url(./assets/woman-using-a-phone-in-a-car.jpg);
+    background-image: url(./woman-using-a-phone-in-a-car.jpg);
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -105,4 +105,61 @@ footer span{
     font-family: 'Staatliches', cursive;
     color: white;
     font-size: 30px;
+}
+
+#conteudo2{
+    background-color: #23617ba4;
+    height: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#conteudo2 img{
+    width: 638px;
+    height: 638px;
+}
+
+#imagem{
+    display: flex;
+    justify-content: right;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+#alinhamento{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 92%;
+    align-items:flex-start;
+}
+
+#alinhamento span{
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+#alinhamento a{
+    margin-top: 30px;
+    border: 0;
+    display: flex;
+    text-align: center ;
+    background-color: #F0AF08;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 300;
+    text-decoration: none;
 }
