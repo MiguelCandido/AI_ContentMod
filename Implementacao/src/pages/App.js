@@ -1,8 +1,16 @@
 import '../assets/styles.css'
+import { React, Component } from 'react';
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 
-export default function Home() {
+export default class Perfil extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      urlimg: '',
+    };
+  }
+
   /* function imageOption(){
     document.getElementById("imageoption").src = ("imageoptionn") // coloque a variável das condições que vai mudar a imagem
     setTimeout(function(){ imagemOption(); }, 10000); //intervalo de 10 segundos
@@ -33,7 +41,7 @@ export default function Home() {
   } */
 
 
-  function ModeracaoImg() {
+  ModeracaoImg = () =>  {
     const axios = require('axios');
 
     axios.get('https://api.sightengine.com/1.0/check.json', {
@@ -81,8 +89,21 @@ export default function Home() {
        else console.log(error.message);
      });*/
 
-  useEffect(ModeracaoImg, []);
+     updateEstado = async (event) => {
+      await this.setState({
+        urlimg : event.target.value
+  
+      })
+  
+      console.log(this.state.urlimg)
+    }
 
+    envio = async (event) => {
+      localStorage.setItem('url', this.state.urlimg)
+    }
+
+
+  render() {
   return (
     <div>
       <main>
@@ -90,8 +111,8 @@ export default function Home() {
           <h1>O quão sensível é sua imagem?</h1>
           <span>A partir da utilização dos serviços da API do SightEngine, podemos detectar a probabilidade da sua imagem de conter conteúdos sensíveis (Nudez, armas, drogas, álcool, violência)</span>
           <form id="formulario">
-            <input type="url" id="file" placeholder="Adicione a url da imagem"/>
-            <Link to="/Resultado"><button type="submit">Enviar</button></Link>
+            <input type="url" id="file" placeholder="Adicione a url da imagem" onChange ={this.updateEstado} value={this.state.urlimg}/>
+            <Link to="/Resultado"><button type="submit" onClick={this.envio}>Enviar</button></Link>
           </form>
 
         </section>
@@ -102,4 +123,5 @@ export default function Home() {
       </main>
     </div>
   );
+}
 }

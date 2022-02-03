@@ -1,9 +1,23 @@
 import direitos from '../assets/direitos-autorais-e-de-imagem.jpg'
 import '../assets/styles.css'
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, Component} from "react";
 /* import { Link } from 'react-router-dom'; */
 
-export default function Resultado() {
+export default class Perfil extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        imagem: '',
+      };
+    }
+
+    componentDidMount() {
+        this.state.imagem = localStorage.getItem("url")
+      }
+
+
+    render() {
     return (
         <div>
             <main>
@@ -31,4 +45,4 @@ export default function Resultado() {
             </main>
         </div>
     );
-}
+}}
