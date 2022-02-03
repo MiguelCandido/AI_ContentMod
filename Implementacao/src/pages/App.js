@@ -1,5 +1,6 @@
 import '../assets/styles.css'
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   /* function imageOption(){
@@ -84,20 +85,22 @@ export default function Home() {
 
   return (
     <div>
-      <section id="conteudo">
-            <h1>O quão sensível é sua imagem?</h1>
-            <span>A partir da utilização dos serviços da API do SightEngine, podemos detectar a probabilidade da sua imagem de conter conteúdos sensíveis (Nudez, armas, drogas, álcool, violência)</span>
-            <form id = "formulario">
-                <input type="file" id="file"/>
-                <label for="file">Escolher imagem</label>
-                <button type="submit">Enviar</button>
-            </form>
-        
+      <main>
+        <section id="conteudo">
+          <h1>O quão sensível é sua imagem?</h1>
+          <span>A partir da utilização dos serviços da API do SightEngine, podemos detectar a probabilidade da sua imagem de conter conteúdos sensíveis (Nudez, armas, drogas, álcool, violência)</span>
+          <form id="formulario">
+            <input type="file" id="file" />
+            <label for="file">Escolher imagem</label>
+            <Link to="/Resultado"><button type="submit">Enviar</button></Link>
+          </form>
+
         </section>
+
         <footer>
-            <span>ESCOLA senai de INFORMÁTICA - 2022</span>
-            <a href="Resultados">a</a>
+          <span>ESCOLA senai de INFORMÁTICA - 2022</span>
         </footer>
+      </main>
     </div>
   );
 }
