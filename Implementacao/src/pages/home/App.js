@@ -7,14 +7,31 @@ export default function App() {
     document.getElementById("imageoption").src = ("imageoptionn") // coloque a variável das condições que vai mudar a imagem
     setTimeout(function(){ imagemOption(); }, 10000); //intervalo de 10 segundos
  } */
- 
- /* function imageOption() {
-   document.addEventListener("DOMContentLoaded", function () {
-     document.getElementById("imageoption").src = ('#img');
-    });
+
+  /* function imageOption() {
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("imageoption").src = ('#img');
+     });
+   } */
+
+  /* bannerImage = document.getElementById('bannerImg');
+  imgData = getBase64Image(bannerImage);
+  localStorage.setItem("imgData", imgData);
+
+  function readURL(input) {
+    document.getElementById("bannerImg").style.display = "block";
+
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        document.getElementById('bannerImg').src = e.target.result;
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
   } */
-  //const [novaUrl, setNovaUrl] = useState('')
-  const input = document.querySelector('#input');
+
 
   function ModeracaoImg() {
     const axios = require('axios');
@@ -68,11 +85,19 @@ export default function App() {
 
   return (
     <div>
-      <input id='input' type="text" />
-      <button type="submit">Enviar</button>
-      {/* <div onload="imageOption()">
-        <img width="50px" id="imageoption" src="img" />
-      </div> */}
+      <section id="conteudo">
+            <h1>O quão sensível é sua imagem?</h1>
+            <span>A partir da utilização dos serviços da API do SightEngine, podemos detectar a probabilidade da sua imagem de conter conteúdos sensíveis (Nudez, armas, drogas, álcool, violência)</span>
+            <form id = "formulario">
+                <input type="file" id="file"/>
+                <label for="file">Escolher imagem</label>
+                <button type="submit">Enviar</button>
+            </form>
+        
+        </section>
+        <footer>
+            <span>ESCOLA senai de INFORMÁTICA - 2022</span>
+        </footer>
     </div>
   );
 }
