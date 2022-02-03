@@ -1,14 +1,14 @@
-import logo from '../../logo.svg';
-import '../../App.css';
+import direitos from '../assets/direitos-autorais-e-de-imagem.jpg'
+import '../assets/styles.css'
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom'; */
 
-export default function Reseultado() {
+export default function Resultado() {
     return (
         <div>
             <section id="conteudo2">
                 <div id="imagem">
-                    <img src="../assets/direitos-autorais-e-de-imagem.jpg" alt="" />
+                    <img src={direitos} alt="" />
                 </div>
                 <div id="alinhamento">
                     <span>nudez: xx%</span>
@@ -19,7 +19,7 @@ export default function Reseultado() {
                     <span>violencia xx%</span>
                     <span>dados sensíveis xx%</span>
 
-                    <Link to="/Resultado"><a href="">Voltar</a></Link>
+                    {/* <Link to="/Resultado"><a href="">Voltar</a></Link> */}
                 </div>
 
             </section>

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sura&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: 0;
+}
+
+main {
+    background-image: url(../assets/woman-using-a-phone-in-a-car.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+#conteudo{
+    background-color: #23617ba4;
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#conteudo h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 91px;
+    width: 540px;
+    text-align: center;
+    color: #F0AF08;
+    font-weight:normal;
+    margin-top: 30px;
+}
+
+#conteudo span{
+    width: 784px;
+    text-align: center;
+    font-family: 'Sura', serif;
+    color: white;
+    font-size: 25px;
+}
+
+#formulario{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formulario input{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#formulario label{
+display: inline-block;
+display: flex;
+text-align: center ;
+background-color: #FDC63A;
+font-family: 'Staatliches', cursive;
+color: white;
+cursor: pointer;
+width: 217px;
+height: 59px;
+border-radius: 23px;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+font-weight: 300;
+}
+
+#formulario button{
+    margin-top: 50px;
+    border: 0;
+    display: flex;
+    text-align: center ;
+    background-color: #F0AF08;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    cursor: pointer;
+    width: 263px;
+    height: 78px;
+    border-radius: 23px;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 300;
+    }
+
+
+footer{
+    height: 5%;
+    background-color: #193c4bf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span{
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-size: 30px;
+}
+
+#conteudo2{
+    background-color: #23617ba4;
+    height: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#conteudo2 img{
+    width: 638px;
+    height: 638px;
+}
+
+#imagem{
+    display: flex;
+    justify-content: right;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+#alinhamento{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 92%;
+    align-items:flex-start;
+}
+
+#alinhamento span{
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+#alinhamento a{
+    margin-top: 30px;
+    border: 0;
+    display: flex;
+    text-align: center ;
+    background-color: #F0AF08;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 300;
+    text-decoration: none;
+}
