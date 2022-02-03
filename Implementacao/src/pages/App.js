@@ -90,8 +90,7 @@ export default function Home() {
           <h1>O quão sensível é sua imagem?</h1>
           <span>A partir da utilização dos serviços da API do SightEngine, podemos detectar a probabilidade da sua imagem de conter conteúdos sensíveis (Nudez, armas, drogas, álcool, violência)</span>
           <form id="formulario">
-            <input type="file" id="file" />
-            <label for="file">Escolher imagem</label>
+            <input type="url" id="file" placeholder="Adicione a url da imagem"/>
             <Link to="/Resultado"><button type="submit">Enviar</button></Link>
           </form>
 

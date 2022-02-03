@@ -49,30 +49,23 @@ main {
 }
 
 #formulario input{
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    color: var(--input-color);
+    background-color: white;
+    transition: border .3s ease;
+    font-family: 'Staatliches', cursive;
+    font-size: 15px;
 }
 
-#formulario label{
-display: inline-block;
-display: flex;
-text-align: center ;
-background-color: #FDC63A;
-font-family: 'Staatliches', cursive;
-color: white;
-cursor: pointer;
-width: 217px;
-height: 59px;
-border-radius: 23px;
-align-items: center;
-justify-content: center;
-font-size: 30px;
-font-weight: 300;
-}
+
 
 #formulario button{
     margin-top: 50px;
