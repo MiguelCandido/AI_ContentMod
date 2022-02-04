@@ -19,10 +19,10 @@ export default class Perfil extends Component {
       params: {
         'url': localStorage.getItem("url"),
         'models': 'nudity,wad,offensive,text-content,gore',
-        //'api_user': '965575714',
-        //'api_secret': 'VmXAhhDadWLZEHf4oYhP',
-        'api_user': '599816885',
-        'api_secret': 'Qo5HVp6PdTcToczZiST5',
+        'api_user': '965575714',
+        'api_secret': 'VmXAhhDadWLZEHf4oYhP',
+        /* 'api_user': '599816885',
+        'api_secret': 'Qo5HVp6PdTcToczZiST5', */
       }
 
     })
@@ -31,11 +31,11 @@ export default class Perfil extends Component {
         that.setState({ resposta: response.data })
         //console.log(that.state.resposta)
         
-        console.log(`Nudez: ${1.0 - that.state.resposta.nudity.safe}%`)  
+        console.log(`Nudez: ${(1.0 - that.state.resposta.nudity.safe).toFixed(2)}%`)  
         console.log(`Armas: ${that.state.resposta.weapon}%`) 
         console.log(`Álcool: ${that.state.resposta.alcohol}%`)
         console.log(`Drogas: ${that.state.resposta.drugs}%`)
-        console.log(`Ofensivo: ${that.state.resposta.offensive.prob.toFixed(2)}%`)
+        console.log(`Ofensivo: ${that.state.resposta.offensive.prob}%`)
         console.log(`Sangue ${that.state.resposta.gore.prob}%`)
         console.log(that.state.resposta.text.profanity)
         console.log(that.state.resposta.text.personal)
