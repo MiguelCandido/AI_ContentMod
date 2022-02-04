@@ -1,6 +1,5 @@
 import '../assets/styles.css'
 import { React, Component } from 'react';
-import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 
 export default class Perfil extends Component {
@@ -80,7 +79,6 @@ export default class Perfil extends Component {
       console.log("Enviei")
     }
 
-
   render() {
   return (
     <div>
@@ -90,7 +88,7 @@ export default class Perfil extends Component {
           <span>A partir da utilização dos serviços da API do SightEngine, podemos detectar a probabilidade da sua imagem de conter conteúdos sensíveis (Nudez, armas, drogas, álcool, violência)</span>
           <form id="formulario">
             <input type="url" id="file" placeholder="Adicione a url da imagem" onChange ={this.updateEstado} value={this.state.urlimg}/>
-            <Link to="/Resultado"><button type="submit" onClick={this.envio}>Enviar</button></Link>
+            <Link to="/Resultado" style={{ color: 'inherit', textDecoration: 'inherit'}}><button type="submit" onClick={this.envio}>Enviar</button></Link>
           </form>
 
         </section>

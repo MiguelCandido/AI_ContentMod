@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {
   Route,
   BrowserRouter as Router,
-  Redirect,
   Switch,
 } from 'react-router-dom';
 import Home from './pages/App';
@@ -14,9 +13,9 @@ const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={Home} /> 
-        <Route path="/Resultado" component={Resultado}/>
-        </Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/Resultado" component={Resultado} />
+      </Switch>
     </div>
   </Router>
 )
